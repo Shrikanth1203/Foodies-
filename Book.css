@@ -1,0 +1,84 @@
+/* Book.css */
+
+form {
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 100%;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+/* Use media query for larger screens */
+@media (min-width: 640px) {
+  form {
+    max-width: 500px;
+    padding: 30px;
+  }
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 16px;
+  display: block;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.2s ease-in-out, box-shadow 0.2s;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+  outline: none;
+  border-color: #3b82f6; /* Tailwind blue-500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive Text & Padding */
+@media (max-width: 480px) {
+  label {
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="time"] {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  button[type="submit"] {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

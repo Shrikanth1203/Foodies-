@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+
+:root {
+    --orange: #F79F1F;
+    --text-color-1: #444;
+    --text-color-2: #666;
+    --bg-color-1: #fff;
+    --bg-color-2: #eee;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+/* Apply a root container style */
+.appContainer {
+    background: var(--bg-color-2);
+}
+
+/* Section Styling */
+.section {
+    padding: 2rem 7%;
+    background-color: rgb(255, 230, 194);
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    color: var(--text-color-1);
+    font-size: 4rem;
+}
+
+.heading span {
+    position: relative;
+}
+
+.heading span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    background: var(--orange);
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 90%, 100% 83%, 100% 100%, 0% 100%);
+}
+
+/* Button Styling */
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: #ab6806;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-color-1);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: red;
+}
+
+.logo {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: var(--text-color-1);
+}
+
+.logo i {
+    color: var(--orange);
+}
+
+/* Search Bar */
+.searchForm {
+    background: var(--bg-color-2);
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
+    width: 50rem;
+}
+
+.searchInput {
+    height: 100%;
+    width: 100%;
+    background: none;
+    font-size: 1.5rem;
+    color: var(--text-color-1);
+    padding: 1rem;
+}
+
+/* Navbar */
+/* .navbar {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: var(--bg-color-1);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 25rem;
+    transform: scale(0);
+    transform-origin: top right;
+} */
+
+.navbarActive {
+    transform: scale(1);
+}
+
+.navbar a {
+    display: block;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-color-1);
+    border-radius: .5rem;
+}
+
+.navbar a:hover {
+    color: var(--orange);
+    background: var(--bg-color-2);
+    padding-left: 2rem;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 7rem;
+    background: #fff;
+}
+
+.image img {
+    width: 100%;
+}
+
+.content h3 {
+    color: var(--text-color-1);
+    font-size: 4rem;
+}
+
+.content p {
+    color: var(--text-color-2);
+    font-size: 1.7rem;
+    line-height: 1.7;
+    padding: 1rem 0;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+    .section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        right: 2rem;
+    }
+    .searchForm {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        background: var(--bg-color-1);
+        border-radius: .5rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+        transform: scale(0);
+    }
+    .searchFormActive {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+ 

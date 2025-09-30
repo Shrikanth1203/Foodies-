@@ -1,0 +1,101 @@
+.packages {
+  padding: 50px 20px;
+  background-color: bisque;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.heading span {
+  color: #ff6347;
+}
+
+.packages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.package-box {
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.package-box:hover {
+  transform: translateY(-5px);
+}
+
+.package-box .image {
+  position: relative;
+}
+
+.package-box .image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.package-box .image h3 {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+.package-box .content {
+  padding: 20px;
+}
+
+.package-box .price {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #ff6347;
+  font-weight: bold;
+}
+
+.package-box .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.package-box .btn:hover {
+  background-color: #ff6347;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .package-box .image h3 {
+    font-size: 1rem;
+  }
+
+  .package-box .price {
+    font-size: 1.1rem;
+  }
+}
